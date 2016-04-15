@@ -1,0 +1,24 @@
+Spring
+Using ‘autowire-candidate‘ as false totally exclude a bean from being an autowire candidate. It totally exclude that specific bean definition from being available to the autowiring infrastructure.
+If you want to inject (for example) an HTTP request scoped bean into another bean, you must inject an AOP proxy in place of the scoped bean
+
+Spring-managed component. @Repository, @Service, and @Controller are specializations of@Component for more specific use cases, for example, in the persistence, service, and presentation layers, respectively. 
+
+<context:component-scan> implicitly enables the functionality of<context:annotation-config>.
+
+Instead of @Autowired, @javax.inject.Inject may be used as follows:
+Instead of @Component, @javax.inject.Named may be used as follows:
+
+AnnotationConfigWebApplicationContext
+
+The @Profile annotation is actually implemented using a much more flexible annotation called @Conditional. 
+
+If you use predominantly constructor injection, it is possible to create an unresolvable circular dependency scenario.
+
+A <bean/> element inside the <property/> or <constructor-arg/> elements defines a so-called inner bean.
+
+Lazy-initialized beans lazy-init="true"
+lazy-init="true"
+Lookup method injection
+<aop:scoped-proxy/>
+
