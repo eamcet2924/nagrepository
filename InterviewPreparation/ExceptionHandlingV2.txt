@@ -1,0 +1,25 @@
+1) Rule: If the superclass method does not
+ declare an exception, subclass overridden
+ method cannot declare the checked exception.
+2) Rule: If the superclass method does not
+ declare an exception, subclass overridden 
+method cannot declare the checked exception 
+but can declare unchecked exception.
+In what kind of scenarios, a finally block is not executed?
+Code in finally is NOT executed only in two situations.
+
+If exception is thrown in finally.
+If JVM Crashes in between (for example, System.exit()).
+Is a finally block executed even when there is a return statement in the try block?
+Yes. In the example below, connection.close() method is called even though there is a return in the catch block.
+printStactTrace method prints the entire stack trace when an exception occurs. If you handle an exception, it is always a good practice to log the trace.
+
+When you are keeping multiple catch blocks, the order of catch blocks must be from most specific to most general ones. i.e sub classes of Exception must come first and super classes later. If you keep super classes first and sub classes later,
+ compiler will show unreachable catch block error.
+Prefer Unchecked exception over checked until you have a very good reason of not to do so. it improves readability of
+code by removing boiler plate exception handling code
+
+7) What is Exception chaining in Java?
+Exception chaining is a popular exception handling concept in Java, where another exception is thrown in response of an exception and creating a chain of Exceptions. This technique mostly used to wrap a checked exception into an unchecked or RuntimeException. By the way if you are throwing new exception due to another exception then always include original exception so that handler code can access root cause by using methods like getCause() and initCause()
+
+It’s worth knowing that, finally block in Java executes even when return keyword is used in try block. Only time they don’t execute is when you call JVM to exit by executing System.exit(0)from try block in Java.
