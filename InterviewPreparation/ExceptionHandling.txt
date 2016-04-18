@@ -1,0 +1,23 @@
+throws: When we are throwing any checked exception in a method and not handling it, then we need to use throws keyword in method signature to let caller program know the exceptions that might be thrown by the method. The caller method might handle these exceptions or propagate it to it’s caller method using throws keyword. We can provide multiple exceptions in the throws clause and 
+it can be used with main() method also.
+
+finally block gets executed always, whether exception occurrs or not.
+Errors are exceptional scenarios that are out of scope of application 
+and it’s not possible to anticipate and recover from them, for example hardware failure, JVM crash or out of memory error.
+
+ Java 7 one of the feature was multi-catch block where we can catch multiple exceptions in a single catch block. The catch block with this feature looks like below:
+
+
+catch(IOException | SQLException | Exception ex){
+     logger.error(ex);
+     throw new MyException(ex.getMessage());
+}
+ java 7 one of the improvement was try-with-resources where we can create a resource in the try statement itself and use it inside the try-catch block. When the execution comes out of try-catch block, runtime environment automatically close these resources. Sample of try-catch block with this improvement is:
+
+
+try (MyResource mr = new MyResource()) {
+            System.out.println("MyResource created in try-with-resources");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+We can always catch Exception or any unchecked exception even if it’s not in the throws clause of the method.
