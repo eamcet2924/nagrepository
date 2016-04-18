@@ -1,0 +1,22 @@
+The SOAP envelope contains two parts:
+
+An optional header providing information on authentication, encoding of data, or how a recipient of a SOAP message should process the message.
+The body that contains the message. These messages can be defined using the WSDL specification.
+SOAP commonly uses HTTP, but other protocols such as Simple Mail Transfer Protocol (SMTP) may by used. SOAP can be used to exchange complete documents or to call a remote procedure.
+
+ The messaging components use the messaging specifications. There are three types of components described here:
+
+Web Services Adapters
+Web Services Message Routers
+Enterprise Service Bus (ESB)
+Message routers direct data from a requesting resource to a responding resource and back. These are also known as data routers, application brokers, or message brokers.
+
+An Enterprise Service Bus (ESB) facilitates the transfer of data and intructions among services, processes, applications, existing internal systesm, data warehouses, analytical systems, and so on. The term bus is borrowed from computer architecture, since a computer bus similarly transfers data and instructions among components in a computer.
+An Enterprise Service Bus can also be offered in a Cloud.
+
+A service-oriented architecture is essentially a collection of services. These services communicate with each other. The communication can involve either simple data passing or it could involve two or more services coordinating some activity. Some means of connecting services to each other is needed.
+
+Service-oriented architectures are not a new thing. The first service-oriented architecture for many people in the past was with the use DCOM or Object Request Brokers (ORBs) based on the CORBA specification. For more on DCOM and CORBA
+
+Most APIs in Cloud Computing are associated with Software as a Service (SaaS) Cloud Providers. They usually implemented using Web Services such as SOAP, REST, or JSON.
+Business Process Modeling Language (BPML) is a meta-language for the modeling of business processes, like XML, is a meta-language for the modeling of business data. BPML provides an abstracted execution model for collaborative and transactional business processes based on the concept of a transactional finite-state machine.
