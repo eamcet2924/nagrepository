@@ -1,0 +1,11 @@
+With SOA, 
+functionalities are expressed as a collection of services rather than a single application, marking a fundamental shift 
+in how developers approach enterprise architecture design.  
+A crucial aspect of SOA is service orchestration. As this article will show, enterprise systems and integration projects designed according to SOA principles depend on successful service orchestration. Finding a platform with enhanced service orchestration capabilities, then, is a high priority for enterprises looking to build their systems according to SOA. - See more at: https://www.mulesoft.com/resources/esb/service-orchestration-and-soa#sthash.H5MHHmV0.dpuf
+To get a better sense of service orchestration, let’s take a look at the following example. A loan broker wants to make a loan request on behalf of a customer and uses an automated Loan Request Service. The broker accesses the Loan Request Service in the enterprise system to make the initial loan request, which is sent to an orchestrator (the central messaging engine) that then calls and invokes other services in the enterprise, partner systems and/or the cloud to process that request. The individual sub-services involved in the loan request include a service to obtain credit scores from a credit agency, a service to retrieve a list of lenders, a service to request quotes from a bank service, and a service to process quotes with the data from the other services. Together, the orchestrated services comprise the Loan Request Service, which then returns a list of quotes from potential lenders to the broker who made the original request. - See more at: https://www.mulesoft.com/resources/esb/service-orchestration-and-soa#sthash.H5MHHmV0.dpuf
+
+Using the Right Platform for Service Orchestration and SOA
+
+ESBs and other integration platforms make the service orchestration process much simpler and eliminate the need for custom coding. ESBs enable enterprise application integration (EAI) and act as orchestrators by allowing services to communicate with each other.
+
+- See more at: https://www.mulesoft.com/resources/esb/service-orchestration-and-soa#sthash.H5MHHmV0.dpuf
