@@ -1,0 +1,19 @@
+3.1.1 What Is REST?
+
+REST-style services (i.e., RESTful services) adhere to a set of constraints and architectural principles that include the following:
+
+RESTful services are stateless. As Fielding writes in Section 5.1.3 of his thesis, "each request from client to server must contain all the information necessary to understand the request, and cannot take advantage of any stored context on the server."
+RESTful services have a uniform interface. This constraint is usually taken to mean that the only allowed operations are the HTTP operations: GET, POST, PUT, and DELETE.
+REST-based architectures are built from resources (pieces of information) that are uniquely identified by URIs. For example, in a RESTful purchasing system, each purchase order has a unique URI.
+REST components manipulate resources by exchanging representations of the resources. For example, a purchase order resource can be represented by an XML document. Within a RESTful purchasing system, a purchase order might be updated by posting an XML document containing the changed purchase order to its URI.
+Fielding writes that "REST-based architectures communicate primarily through the transfer of representations of resources" (Section 5.3.3). This is fundamentally different from the Remote Procedure Call (RPC) approach that encapsulates the notion of invoking a procedure on the remote server. Hence, RPC messages typically contain information about the procedure to be invoked or action to be taken. This information is referred to as a verb in a Web service request. In the REST model, the only verbs allowed are GET, POST, PUT, and DELETE. In the RPC approach, typically many operations are invoked at the same URI. This is to be contrasted with the REST approach of having a unique URI for each resource.
+
+These are the basic principles behind REST. However, when people talk about the benefits of RESTful systems today, they usually are not strictly applying these principles. For example, among REST advocates, keeping shopping cart data on the server and maintaining a session related to the shopping process that is using the cart is acceptable. (Storing session information or shopping cart data on the server is a clear violation of Fielding's original REST concept since it violates the requirement that a service be stateless.) In fact, the XML/HTTP Binding provided by JAX-WS for implementing RESTful services provides for session management capabilities using cookies, URL rewriting, and SSL session IDs.
+
+More significant deviations from Fielding's definition of REST involve getting around the "uniform interface" constraint by embedding verbs and parameters inside URLs. The Amazom.com REST interface, for example, includes verbs in query strings and doesn't have unique URIs for each resource. Systems like this, although labeled as RESTful, are really starting to look very much like RPC using XML over HTTP without SOAP.
+
+For the purposes of this book, I am not going to wade into a debate on what is or isn't RESTful. I simply define RESTful Web Services in contrast to SOAP Web Services. Table 3Â?1 illustrates the principal differences.
+
+
+
+This is consistent with common usage in the REST versus SOAP debates. REST uses simple XML over HTTP without a WSDL interface definition.
