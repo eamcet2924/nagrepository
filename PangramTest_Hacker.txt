@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+        Scanner sc = new Scanner(System.in);
+        ArrayList<String> a = new ArrayList<String>();
+        String s = sc.nextLine();
+            
+        
+		
+		for(int i=0;i<s.length();i++)
+		{
+			if(!s.substring(i,i+1).equals(" "))
+			{
+				if(!a.contains(s.substring(i,i+1).toLowerCase()))
+				{
+					a.add(s.substring(i,i+1).toLowerCase());
+				}
+			}
+		}
+		
+          if(a.size()==26)
+              {
+               System.out.println("pangram");
+          }else
+              {
+                System.out.println("not pangram");
+          }
+            
+    
+        
+       
+     
+    }
+}
